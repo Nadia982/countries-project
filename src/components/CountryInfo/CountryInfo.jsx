@@ -29,6 +29,7 @@ const CountryInfo = () => {
 
   useEffect(() => {
     getCountryByName();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [countryName]);
 
   return (
@@ -36,7 +37,8 @@ const CountryInfo = () => {
       <button>
         <Link to="/">Back</Link>
       </button>
-
+      {error ? "There is an error" : null}
+      {isLoading ? "Loading...." : null}
       {country?.map((country, index) => (
         <div className="country_info_container" key={index}>
           <div className="country_info-img">
