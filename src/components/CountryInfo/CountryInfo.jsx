@@ -43,7 +43,7 @@ const CountryInfo = () => {
         <div className="country_info_container" key={index}>
           <div className="country_info-img">
             <img
-              // src={country.flags.png}
+              src={country.flags.png}
               alt={`Flag of ${country.name.common}`}
             />
           </div>
